@@ -13,7 +13,7 @@ docker build -t fic2/content-sharing-docker .
 #### Running the Docker image
 
 ```
-docker run --name content-sharing -d -p 8083:8083 fic2/content-sharing-docker
+docker run --name content-sharing -d -p 8083:8083 -v /dev/urandom:/dev/random fic2/content-sharing-docker
 ```
 
 ### Accessing the application
