@@ -13,9 +13,9 @@ docker build -t fic2/content-sharing-docker .
 #### Running the Docker image
 
 ```
-docker run --name content-sharing -d -p 8080:8080 fic2/content-sharing-docker
+docker run --name content-sharing -d -p 8083:8083 fic2/content-sharing-docker
 ```
 
 ### Accessing the application
 
-browse to [http://localhost:8080/feedsync](http://localhost:8080/feedsync)
+browse to [http://localhost:8083/feedsync](http://localhost:8083/feedsync)
