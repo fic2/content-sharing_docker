@@ -1,8 +1,6 @@
-FROM ubuntu:14:04
+FROM tomcat:7
 
-RUN /usr/bin/apt-get -y update \
-    && /usr/bin/apt-get -y install wget tomvat7 \
-    && wget https://www.dropbox.com/s/olk95ij46igbmmk/feedsync.war?dl=0 -O /var/lib/tomcat7/webapps/feedsync.war \
-    && /usr/bin/service tomcat7 restart
+RUN rm -rf /usr/local/tomcat/webapps/* \
+    && wget https://www.dropbox.com/s/olk95ij46igbmmk/feedsync.war?dl=1 -O /usr/local/tomcat/webapps/feedsync.war
 
-EXPOSE 8083
+RUN echo '78984e3cad0d2993b9a0b03b58f2b0a1  /usr/local/tomcat/webapps/feedsync.war' | md5sum -c -
